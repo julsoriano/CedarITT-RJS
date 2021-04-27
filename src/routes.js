@@ -9,6 +9,7 @@ import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
+
 import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
@@ -19,6 +20,12 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 // core components/views for RTL layout
 import RTLPage from "views/RTLPage/RTLPage.jsx";
 
+// TrackMED 
+import ChartistPage from "./components/TrackMED/Charts/Chartist.jsx";
+import Location from './components/TrackMED/Location.jsx'; 
+import Owner from './components/TrackMED/Owner.jsx'; 
+import Status from './components/TrackMED/Status.jsx'; 
+
 const dashboardRoutes = [
   {
     path: "/dashboard",
@@ -28,6 +35,36 @@ const dashboardRoutes = [
     component: DashboardPage,
     layout: "/admin"
   },
+  {
+    path: "/chartsTM",
+    name: "TM Charts",
+    icon: Dashboard,
+    component: ChartistPage,
+    layout: "/admin"
+  },
+  
+  {
+    path: "/location",
+    name: "Location",
+    icon: "content_paste",
+    component: Location,
+    layout: "/admin"
+  },
+  {
+    path: "/owner",
+    name: "Owner",
+    icon: "content_paste",
+    component: Owner,
+    layout: "/admin"
+  },
+  {
+    path: "/Status",
+    name: "Status",
+    icon: "content_paste",
+    component: Status,
+    layout: "/admin"
+  },
+  
   {
     path: "/user",
     name: "User Profile",

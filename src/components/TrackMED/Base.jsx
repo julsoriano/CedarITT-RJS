@@ -460,13 +460,13 @@ export class Base extends Component {
             if( this.elListSave !== null && this.elListSave !== undefined ) this.elListSave.replace('glyphicon-minus', 'glyphicon-plus');
 
             // create nested table using regular HTML elements
-            // this.createNTableHTML(id, elGP, elP, this.headings);     
+            this.createNTableHTML(id, elGP, elP, this.headings);     
             
             // create nested table using custom HTML elements
             // this.createNTableComponent(id, elGP, elP);
 
             // create nested table using mui-datatables
-            this.createDataTable(id, elGP, elP);
+            // this.createDataTable(id, elGP, elP);
 
             this.elListSave = elList;
 

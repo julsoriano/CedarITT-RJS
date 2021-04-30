@@ -1,10 +1,10 @@
-import DashboardPage from "./components/Dashboard/Dashboard.jsx";
+import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import Dashboard from "@material-ui/icons/Dashboard";
 
-import ChartistPage from "./components/TrackMED/Charts/Chartist.jsx";
-import Location from './components/TrackMED/Location.jsx'; 
-import Owner from './components/TrackMED/Owner.jsx'; 
-import Status from './components/TrackMED/Status.jsx'; 
+import ChartistPage from "components/TrackMED/Charts/ChartistTMHooks.jsx";
+import Location from 'components/TrackMED/Location.jsx'; 
+import Owner from 'components/TrackMED/Owner.jsx'; 
+import Status from 'components/TrackMED/Status.jsx'; 
 
 const dashboardRoutes = [
   {

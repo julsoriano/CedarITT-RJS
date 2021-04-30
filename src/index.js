@@ -1,45 +1,33 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
-/* See https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md
-  "history" manages session history in JavaScript
-  "browser history" - A DOM-specific implementation, useful in web browsers that support the HTML5 history API
-*/
-import { createBrowserHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
-
-// core components
-import Admin from "layouts/Admin.jsx";
-import RTL from "layouts/RTL.jsx";
-
-// this import will not work without jsconfig.json
-import "assets/css/material-dashboard-react.css?v=1.7.0";
-
-const hist = createBrowserHistory();
-
-ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/admin" component={Admin} />
-      <Route path="/rtl" component={RTL} />
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
-  </Router>,
-  document.getElementById("root")
-);
-
-
-/* Original
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+// import App from './AppFunc';
+// import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+/* Important !!! See https://www.sitepoint.com/react-router-complete-guide/ Implicit Passing of Props
+   If the Route tag below has been coded as: <Route path="/" component={App} /></Route>
+     it would not pass the match, location and history as props and this program will not work
 */
+ReactDOM.render(
+  <Router>
+      <Route path="/" component={App} />
+  </Router>,
+  document.getElementById('root')
+);
+// ReactDOM.render(<App />, document.querySelector('#root'));
+
+/*
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+*/
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();

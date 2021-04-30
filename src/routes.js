@@ -21,10 +21,10 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 import RTLPage from "views/RTLPage/RTLPage.jsx";
 
 // TrackMED 
-import ChartistPage from "./components/TrackMED/Charts/Chartist.jsx";
-import Location from './components/TrackMED/Location.jsx'; 
-import Owner from './components/TrackMED/Owner.jsx'; 
-import Status from './components/TrackMED/Status.jsx'; 
+import ChartistPage from "components/TrackMED/Charts/ChartistRD.jsx";
+import Location from 'components/TrackMED/Location.jsx'; 
+import Owner from 'components/TrackMED/Owner.jsx'; 
+import Status from 'components/TrackMED/Status.jsx'; 
 
 const dashboardRoutes = [
   {

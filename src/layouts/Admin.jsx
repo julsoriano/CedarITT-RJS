@@ -53,13 +53,14 @@ class Dashboard extends React.Component {
   */
   mainPanel = React.createRef();
 
-  //
   handleImageClick = image => {
     this.setState({ image: image });
   };
+
   handleColorClick = color => {
     this.setState({ color: color });
   };
+
   handleFixedClick = () => {
     if (this.state.fixedClasses === "dropdown") {
       this.setState({ fixedClasses: "dropdown show" });
@@ -67,6 +68,7 @@ class Dashboard extends React.Component {
       this.setState({ fixedClasses: "dropdown" });
     }
   };
+  
   handleDrawerToggle = () => {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
@@ -130,7 +132,7 @@ class Dashboard extends React.Component {
       <div className={classes.wrapper}>
         <Sidebar
           routes={routes}
-          logoText={"Creative Tim"}
+          logoText={"Cedar ITT"}
           logo={logo}
           image={this.state.image}
           handleDrawerToggle={this.handleDrawerToggle}

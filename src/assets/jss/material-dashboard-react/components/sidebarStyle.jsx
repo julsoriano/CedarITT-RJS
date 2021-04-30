@@ -16,6 +16,41 @@ import {
 } from "assets/jss/material-dashboard-react.jsx";
 
 const sidebarStyle = theme => ({
+  // Responsive Drawer
+  root: {
+    display: 'flex',
+  },
+  drawer: {
+    [theme.breakpoints.up('sm')]: {
+      width: drawerWidth,
+
+      // See https://cssreference.io/property/flex-shrink/
+      //   The element will not shrink: it will retain the width it needs, and not wrap its content. 
+      //     Its siblings will shrink to give space to the target element.
+      //   Because the target element will not wrap its content, there is a chance for the 
+      //    flexbox container's content to overflow
+      //
+      flexShrink: 0, 
+    },
+  },
+  appBar: {
+    [theme.breakpoints.up('sm')]: {
+      width: `calc(100% - ${drawerWidth}px)`,
+      marginLeft: drawerWidth,
+    },
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+  drawerPaperRD: {
+    width: drawerWidth,
+  },  
+  // Original
   drawerPaper: {
     border: "none",
     position: "fixed",
@@ -59,6 +94,10 @@ const sidebarStyle = theme => ({
       left: "0  !important",
       right: "auto !important"
     }
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
   },
   logo: {
     position: "relative",
